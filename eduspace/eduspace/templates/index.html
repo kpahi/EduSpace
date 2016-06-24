@@ -1,0 +1,16 @@
+{% load staticfiles %}
+
+
+{% if subjects %}
+<ul>
+	{% for subject in subjects%}
+	<li>
+		<a href="{% url 'physics'  subject.id %}">{{subject.subject}}</a>
+		
+	</li>
+	
+	{%endfor%}
+
+</ul>
+
+{%endif %}

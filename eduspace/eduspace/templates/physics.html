@@ -1,0 +1,58 @@
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>Physics</title>
+		<!--<link rel="shortcut icon" type="image/x-icon" href="images/pageicon.png" />-->
+		{% include 'base_html.html' %}
+		<meta name="keywords" content="Videostube iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+
+	</head>
+
+	<body>
+	
+		<!----start-wrap---->
+	<div class="wrap">
+		<!----start-Header---->
+		<div class="header">
+			<!----start-Logo---->
+			<div class="logo">
+				<a href="index.html"><h1>EduSpace/Physics</h1></a>
+			</div>
+			<!----End-Logo---->
+			<!----start-top-nav---->
+			
+			<div class="clear"> </div>
+			<div class="top-nav">
+				<ul>
+					<li><a href="{% url 'home' %}">Home</a></li>
+					<li><a href=" ">Physics</a></li>
+					<li><a href="#">Chemistry</a></li>
+					<li><a href="#">Math</a></li>
+					<li><a href="#">About Us</a></li>
+				</ul>
+			</div>
+			<!----End-top-nav---->
+		</div>
+		<!----End-Header---->
+
+		<div class="content">
+			
+			{% if details %}
+
+				{% for detail in details %}
+					<li><a href="{% url 'description'  detail.id %}" >{{detail.topics}} </a>
+						{{detail.id}}
+					</li>
+				{%endfor%}
+			{%endif %}
+		</div>
+
+</body>
+
+
+
+
+
+</html>
