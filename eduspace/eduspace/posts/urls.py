@@ -17,7 +17,7 @@ urlpatterns = [
     #url(r'^login/', views.login, name="login"),
     #url(r'^posts/$', "<appname>.views.<function_name>"),  
     url(r'^physics/(?P<sub_id>[0-9]+)$', views.physics, name = "physics"),
-    url(r'^chemistry/$', views.chemistry, name = "chemistry"),
+    url(r'^chemistry/(?P<sub_id>[0-9]+)$', views.chemistry, name = "chemistry"),
     
     url(r'^physics/topic_id/(?P<explain_id>[0-9]+)$', views.indv_expl, name = "description"),
 

@@ -18,8 +18,9 @@ def physics(request, sub_id):
 	#template_name = 'physics.html'
 	return render(request, 'physics.html', {'details':details})
 
-def chemistry(request):
-	return render(request,'chemistry.html')
+def chemistry(request, sub_id):
+	details = Explain.objects.filter(sub_id = 6)
+	return render(request,'chemistry.html', {'details':details})
 
 def indv_expl(request, explain_id):
 	description = get_object_or_404(Explain, pk = explain_id)
