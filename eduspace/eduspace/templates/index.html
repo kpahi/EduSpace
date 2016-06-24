@@ -21,6 +21,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->{% load staticfiles %}
+
 <!DOCTYPE HTML>
 <html>
 
@@ -39,23 +40,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="wrap">
 		<!----start-Header---->
 		<div class="header">
-			<!----start-Logo---->
-			<div class="logo">
-				<a href="index.html"><h1>EduSpace</h1></a>
-			</div>
-			<!----End-Logo---->
-			<!----start-top-nav---->
-			
+				<!----start-top-nav---->			
 			<div class="clear"> </div>
+			<div class="container-fluid">
+    			<div class="navbar-header">
+     			 <a class="navbar-brand"  href="index.html"><h1>EduSpace</h1></a>
+    		</div>
 			<div class="top-nav">
-				<ul>
+				<ul class="nav navbar-nav navbar-right">
 					<li><a href=" ">Home</a></li>
 					<li><a href=" {% url 'physics' 5 %}">Physics</a></li>
 					<li><a href="{% url 'chemistry' 6 %}">Chemistry</a></li>
 					<li><a href="#">Math</a></li>
 					<li><a href="#">About Us</a></li>
 				</ul>
-			</div>
+		</div>
 			<!----End-top-nav---->
 		</div>
 	
@@ -72,247 +71,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<p>Latest Video Form EduSpace</p>
 					</div>
 					<div class="search-right">
-						<form>
-							<input type="text"><input type="submit" value="" />
+						<form method="get" action="/results/" class="navbar-form pull-right">
+							<input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder="Search">
 						</form>
 					</div>
+
 					<div class="clear"> </div>
 				</div>
-				<div class="box">
-				<div class="grids">
-					<div class="grid">
-						<h3>Video No 1</h3>
-						<a href="single.html"><img src="{% static 'img/g1 copy.png' %}" title="video-name" /></a>
-						<div class="time">
-							<span>00:10</span>
-						</div>
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'img/likes.png' %} "title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="single.html">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="categories.html">Force</a></p>
-							</div>
-						</div>
-					</div>
-				
-					<div class="grid">
-						<h3>Vedio No 2</h3>
-						<a href="single.html"><img src="{% static 'img/g2 copy.png' %}" title="video-name" /></a>
-						<div class="time">
-							<span>2:10</span>
-						</div>
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'images/likes.png' %} " title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="single.html">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="categories.html">Magnet</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="grid">
-						<h3>Vedio No 3</h3>
-						<a href="single.html"><img src="{% static 'img/g4.jpg' %}" title="video-name" /></a>
-						<div class="time">
-							<span>10:10</span>
-						</div>
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'img/likes.png' %} " title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="single.html">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="categories.html">Chem</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clear"> </div>
-				<div class="grids">
-					<div class="grid">
-						<h3>Vedio No 4</h3>
-						<a href="single.html"><img src="{% static 'img/g3.jpg' %}" title="video-name" /></a>
-						<div class="time">
-							<span>2:30</span>
-						</div>
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'img/likes.png' %} " title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="single.html">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="categories.html">Matter</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="grid">
-						<h3>Vedio No 5</h3>
-						<a href="single.html"><img src="{% static 'img/g5.jpg ' %}" title="video-name" /></a>
-						<div class="time">
-							<span>5:10</span>
-						</div>
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'img/likes.png' %} " title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="single.html">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="categories.html">Chem</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="grid">
-						<h3>Vedio No 6</h3>
-						<a href="single.html"><img src="{% static 'img/g4.jpg '%}" title="video-name" /></a>
-						<div class="time">
-							<span>2:00</span>
-						</div>
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'img/likes.png' %} " title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="single.html">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="categories.html">Phy</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="clear"> </div>
-				<div class="grids">
-					<div class="grid">
-						<h3>Vedio No 7</h3>
-						<a href="single.html"><img src="{% static 'img/g6.jpg' %}" title="video-name" /></a>
-						<div class="time">
-							<span>12:10</span>
-						</div>
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'img/likes.png' %} "title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="single.html">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="categories.html">Force</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="grid">
-						<h3>Video No 8</h3>
-						<a href="single.html"><img src="{% static 'img/g7.jpg' %}" title="video-name" /></a>
-						<div class="time">
-							<span>20:10</span>
-						</div>
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'img/likes.png' %} " title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="single.html">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="categories.html">chem</a></p>
-							</div>
-						</div>
-					</div>
-					<div class="grid">
-						<h3>Vedio No 9</h3>
-						<a href="single.html"><img src="{% static 'img/g8.jpg' %}" title="video-name" /></a>
-						<div class="time">
-							<span>2:50</span>
-						</div>
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'img/likes.png' %} " title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="single.html">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="categories.html">phy</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
+<br><br>
+	<div class="row">
+    {% for subject in subjects%}
+       <div class="col-sm-3" >
+       	  <a href="{% url 'physics' subject.id %}">{{subject.subject}}
+        <img class="img-thumbnail center-block" src="{{ subject.image.url }}" style="width:400px ;height:300px" padding="5" /><br>
+      
+          <br>
+          </center>
+      </a>
+      </div>
+    {% endfor %}<br>
+  </div>
+
 				<div class="clear"> </div>
 			</div>
-			<div class="clear"> </div>
-			<ul class="dc_pagination dc_paginationA dc_paginationA03">
-						  <li><a href="#" class="first">First</a></li>
-						  <li><a href="#" class="previous">Previous</a></li>
-						  <li><a href="#">1</a></li>
-						  <li><a href="#">2</a></li>
-						  <li><a href="#" class="current">3</a></li>
-						  <li><a href="#">4</a></li>
-						  <li><a href="#">5</a></li>
-						  <li><a href="#" class="next">Next</a></li>
-						  <li><a href="#" class="last">Last</a></li>
-						  
-						</ul>
-			<div class="clear"> </div>
 		</div>
-		<div class="right-content">
+			</div>
+
+
+		<div class="right-content ">
 			<div class="popular">
 				<h3>Popular Videos</h3>
 				<p><img src="{% static 'img/l1.png' %}" title="likes" /></p>
@@ -342,6 +128,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</div>
 					</div>
+
+
+
 					<div class="clear"> </div>
 					<div class="Recent-Vodeos">
 						<h3>Recent-Videos</h3>
@@ -366,6 +155,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<div class="clear"> </div>
 		</div>
+
+
 		<div class="footer">
 				<div class="wrap"> 
 				

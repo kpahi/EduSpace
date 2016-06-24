@@ -13,6 +13,11 @@ import datetime
 """
 class Subjects(models.Model):
 	subject = models.CharField(max_length=30)
+	image = models.FileField(upload_to = 'uploads/',blank=True)
+	def __str__(self):
+		return self.subject
+
+
 	#subject_name = models.CharField()
 
 class Explain(models.Model):
@@ -20,5 +25,6 @@ class Explain(models.Model):
 	topics = models.CharField(max_length=100)
 	theory = models.TextField()
 	details = models.TextField()
-	#image = models.FileField(upload_to = '')
-
+	image = models.FileField(upload_to = 'uploads/',blank=True)
+	def __str__(self):
+		return self.topics
