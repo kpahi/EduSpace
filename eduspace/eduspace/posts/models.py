@@ -12,8 +12,12 @@ import datetime
 	(3,'Projects'))
 """
 class Subjects(models.Model):
+	"""
+		Stores the subject data
+	"""
 	subject = models.CharField(max_length=30)
 	image = models.FileField(upload_to = 'uploads/',blank=True)
+
 	def __str__(self):
 		return self.subject
 
@@ -26,5 +30,6 @@ class Explain(models.Model):
 	theory = models.TextField()
 	details = models.TextField()
 	image = models.FileField(upload_to = 'uploads/',blank=True)
+	
 	def __str__(self):
 		return self.topics

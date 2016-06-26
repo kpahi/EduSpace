@@ -1,199 +1,215 @@
 {% load staticfiles %}
-
-
-<!--
-
-	{% for subject in subjects%}
-	<li>
-		<a href="{% url 'physics'  subject.id %}">{{subject.subject}}</a>
-		
-		
-	</li>
-	
-	{%endfor%}
-
--->
-
-
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->{% load staticfiles %}
-
-<!DOCTYPE HTML>
-<html>
-
-
-
-	<head>
-		<title>EduSpace</title>
-		<!--<link rel="shortcut icon" type="image/x-icon" href="images/pageicon.png" />-->
-		{% include 'base_html.html' %}
-		<meta name="keywords" content="Videostube iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-		<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-
-	<!----start-wrap---->
-	<div class="wrap">
-		<!----start-Header---->
-		<div class="header">
-				<!----start-top-nav---->			
-			<div class="clear"> </div>
-			<div class="container-fluid">
-    			<div class="navbar-header">
-     			 <a class="navbar-brand"  href="index.html"><h1>EduSpace</h1></a>
-    		</div>
-			<div class="top-nav">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href=" ">Home</a></li>
-					<li><a href=" {% url 'physics' 5 %}">Physics</a></li>
-					<li><a href="{% url 'chemistry' 6 %}">Chemistry</a></li>
-					<li><a href="#">Math</a></li>
-					<li><a href="#">About Us</a></li>
-				</ul>
-		</div>
-			<!----End-top-nav---->
-		</div>
-	
-
-		<!----End-Header---->
-		<div class="clear"> </div>
-
-	<br>	
-	<br>
-		<div class="content">
-			<div class="left-content">
-				<div class="searchbar">
-					<div class="search-left">
-						<p>Latest Video Form EduSpace</p>
-					</div>
-					<div class="search-right">
-						<form method="get" action="/results/" class="navbar-form pull-right">
-							<input type="text" id="searchBox" class="input-medium search-query" name="q" placeholder="Search">
-						</form>
-					</div>
-
-					<div class="clear"> </div>
-				</div>
-<br><br>
-	<div class="row">
-    {% for subject in subjects%}
-       <div class="col-sm-3" >
-       	  <a href="{% url 'physics' subject.id %}">{{subject.subject}}
-        <img class="img-thumbnail center-block" src="{{ subject.image.url }}" style="width:400px ;height:300px" padding="5" /><br>
-      
-          <br>
-          </center>
-      </a>
-      </div>
-    {% endfor %}<br>
-  </div>
-
-				<div class="clear"> </div>
-			</div>
-		</div>
-			</div>
-
-
-		<div class="right-content ">
-			<div class="popular">
-				<h3>Popular Videos</h3>
-				<p><img src="{% static 'img/l1.png' %}" title="likes" /></p>
-				<div class="clear"> </div>
-			</div>
-			<div class="grid1">
-						<h3>Popular Video NO 1</h3>
-						<a href="#"><img src="{% static 'img/g7.jpg' %}" title="video-name" /></a>
-						<div class="time1">
-							<span>2:50</span>
-						</div>
-						
-						<div class="grid-info">
-							<div class="video-share">
-								<ul>
-									<li><a href="#"><img src="{% static 'img/likes.png' %} " title="links" /></a></li>
-									<li><a href="#"><img src="{% static 'img/link.png' %}" title="Link" /></a></li>
-									<li><a href="#"><img src="{% static 'img/views.png' %}" title="Views" /></a></li>
-								</ul>
-							</div>
-							<div class="video-watch">
-								<a href="#">Watch Now</a>
-							</div>
-							<div class="clear"> </div>
-							<div class="lables">
-								<p>Labels:<a href="#">Phy</a></p>
-							</div>
-						</div>
-					</div>
-
-
-
-					<div class="clear"> </div>
-					<div class="Recent-Vodeos">
-						<h3>Recent-Videos</h3>
-						<div class="video1">
-							<img src="{% static 'img/r1.jpg' %}" title="video2" />
-							<span>Experiment No 1</span>
-							<p>It is about the force between two objects. </p>
-							<div class="clear"> </div>
-						</div>
-						<div class="video1 video2">
-							<img src="{% static 'img/r2.jpg' %}" title="video2" />
-							<span>Experiment No 2</span>
-							<p>Experimenting the chemistry behind solution </p>
-							<div class="clear"> </div>
-						</div>
-						<div class="r-all">
-							<a href="#">View All</a>
-						</div>
-					</div>
-		</div>
-		<div class="clear"> </div>
-		</div>
-		<div class="clear"> </div>
-		</div>
-
-
-		<div class="footer">
-				<div class="wrap"> 
-				
-				
-				<div class="box1">
-				<h4>Stay in touch on</h4>
-						<ul class="social">
-							<li><img src="{% static 'img/facebook.png' %}" title="facebook"><a href="#">Facebook</a></li>
-							<li><img src="{% static 'img/twitter.png' %}" title="twitter"><a href="#">Twitter</a></li>
-							<li><img src="{% static 'img/gplus.png' %}" title="google+"><a href="#">Google+</a></li>
-						</ul>
-				</div>
-				<div class="clear"> </div>
-			</div>
-		</div>
-			<div class="clear"> </div>
-			<div class="copy-right">
-			<p>&#169 2013 All rights Reserved | Design by EduSpace</p>
-		</div>
-	</div>
-	<!----End-wrap---->
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script> 
-    <!--<script src="{% static 'js/bootstrap.min.js' %}"></script>-->
-  
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug--> 
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <!--<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>-->
+<!DOCTYPE html>
+<html class="no-js">
+ <head>  
+   <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>EduSpace - An online practical learning portal for students!!!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS
+        ================================================ -->
+        <!-- Owl Carousel -->
         
+      
+    {% include 'base_html.html' %}
+</head>
+	 
+	<body>
+	<!--
+	header-img start 
+	============================== -->
+    <section id="hero-area">
+        <img class="img-responsive" src="{%static 'images/science.png' %}" alt="" >
+           
+    </section>
+	<!--
+    Header start 
+	============================== -->
+	<nav id="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <nav class="navbar navbar-default">
+                          <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                                  <a class="navbar-brand" href="#">
+                                    <img src="images/logo.png" alt="Logo">
+                                  </a>
 
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav navbar-right" id="top-nav">
+                                <li><a href="#hero-area">Home</a></li>
+                                <li><a href="#about-us">about us</a></li>
+                                <li><a href="{% url 'physics' 5 %}">Physics</a></li>
+                                <li><a href="{% url 'chemistry' 6 %}">Chemistry</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#blog">Latest</a></li>
+                                <li><a href="#price">Featured</a></li>
+                                <li><a href="#contact-us">Contacts</a></li>
+                              </ul>
+                            </div><!-- /.navbar-collapse -->
+                          </div><!-- /.container-fluid -->
+                        </nav>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .container close -->
+	</nav><!-- header close -->
+    
+      {% block content %}
+
+      {% endblock %}
+
+    <!--
+    CONTACT US  start
+    ============================= -->
+    <section id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1 class="heading wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms"> <span>CONTACT US</span></h1>
+                        <h3 class="title wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">Sign Up for <span>Email Alerts</span> </h3>
+                        <form>
+                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Write your full name here...">
+                            </div>
+                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="800ms">
+                                <input type="text" class="form-control" placeholder="Write your email address here...">
+                            </div>
+                            <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1000ms">
+                                <textarea class="form-control" rows="3" placeholder="Write your message here..."></textarea>
+                            </div>
+                        </form>
+                        <a class="btn btn-default wow bounceIn" data-wow-duration="500ms" data-wow-delay="1300ms" href="#" role="button">send your message</a>
+                    </div>
+                </div><!-- .col-md-12 close -->
+            </div><!-- .row close -->
+        </div><!-- .container close -->
+    </section><!-- #contact-us close -->
+    <!--
+    footer  start
+    ============================= -->
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="block wow fadeInLeft"  data-wow-delay="200ms">
+                        <h3>CONTACT <span>INFO</span></h3>
+                        <div class="info">
+                            <ul>
+                                <li>
+                                  <h4><i class="fa fa-phone"></i>Telefone</h4>
+                                  <p>----------</p>
+                                    
+                                </li>
+                                <li>
+                                  <h4><i class="fa fa-map-marker"></i>Address</h4>
+                                  <p>----------</p>
+                                </li>
+                                <li>
+                                  <h4><i class="fa fa-envelope"></i>E mail</h4>
+                                  <p>-----@gmail.com - -----@mail.ru</p>
+                                  
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-md-4 close -->
+                <div class="col-md-4">
+                    <div class="block wow fadeInLeft"  data-wow-delay="700ms">
+                        <h3>LATEST <span>SITE POSTS</span></h3>
+                        <div class="blog">
+                            <ul>
+                                <li>
+                                    <h4><a href="#">--- - ----</a></h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
+                                </li>
+                                <li>
+                                    <h4><a href="#">--- - ----</a></h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
+                                </li>
+                            </ul>                
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-md-4 close -->
+                <div class="col-md-4">
+                    <div class="block wow fadeInLeft"  data-wow-delay="1100ms">
+                        <div class="gallary">
+                            <h3>PHOTO <span>STREAM</span></h3>
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="images/photo/photo-1.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/photo/photo-2.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/photo/photo-3.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/photo/photo-4.jpg" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="social-media-link">
+                            <h3>Follow <span>US</span></h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-dribbble"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-behance"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- .col-md-4 close -->
+            </div><!-- .row close -->
+        </div><!-- .containe close -->
+    </section><!-- #footer close -->
+    <!--
+    footer-bottom  start
+    ============================= -->
+    <footer id="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="block">
+                        <p>Copyright &copy; 2014 - All Rights Reserved.Design and Developed By <a href="http://www.themefisher.com">Themefisher</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 	</body>
 </html>
-
-

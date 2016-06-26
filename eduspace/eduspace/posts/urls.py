@@ -20,5 +20,7 @@ urlpatterns = [
     url(r'^chemistry/(?P<sub_id>[0-9]+)$', views.chemistry, name = "chemistry"),
     
     url(r'^physics/topic_id/(?P<explain_id>[0-9]+)$', views.indv_expl, name = "description"),
+   
+
 
 ]

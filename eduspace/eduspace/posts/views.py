@@ -9,7 +9,7 @@ from .models import Subjects,Explain
 def home(request):
 	subjects = Subjects.objects.all()
 	#return HttpResponse("Hi there");
-	return render(request,'index.html',{'subjects': subjects})
+	return render(request,'home.html',{'subjects': subjects})
 
 def physics(request, sub_id):
 	#details = get_object_or_404(Explain, sub_id = 5)
@@ -24,4 +24,10 @@ def chemistry(request, sub_id):
 
 def indv_expl(request, explain_id):
 	description = get_object_or_404(Explain, pk = explain_id)
-	return render(request, 'indv_expl.html', {'descriptions': description})
+	return render(request, 'explain.html', {'descriptions': description})
+
+
+# two scoops of django
+# harry percival testing
+
+# djaneiro

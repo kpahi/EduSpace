@@ -1,0 +1,48 @@
+   {% extends 'index.html' %}
+
+    {% block content %}
+    {% load staticfiles %}
+
+
+    	 <section id="price">
+        <div class="container">
+           
+                    <div class="block">                        
+                        <div class="pricing-list">
+                            <div class="title">
+                                <h3><span>{{descriptions.topics}}</span></h3>
+                            </div>
+                            <ul>
+                            	<div class="jumbotron">
+                            	<div class="content">
+
+                                  {% if descriptions.topics == "Force and Pressure" %}
+                            <iframe width="700" height="400" src="https://www.youtube.com/embed/4OlGpS2LG_M" frameborder="0" allowfullscreen></iframe>{% endif %}
+                                     <br><br> <br>
+                             <h2>{{descriptions.theory}}</h2>
+                               <br><br> <br>
+                               <h3>{{descriptions.details}}</h3>
+     
+
+                                    <br>
+                                        
+
+                                    </div>
+
+                               </div>
+
+                            </ul>
+                           
+                        </div>
+                    </div>
+            
+          
+
+
+        </div><!-- .containe close -->
+    </section><!-- #price close -->
+
+    {% endblock %}
+
+
+    
